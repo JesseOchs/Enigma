@@ -5,12 +5,12 @@ class Enigma
     # @decryption = Decrypt.new
   end
 
-  def encrypt(message, key, date)
-    encryption = Encrypt.new(message, key, date)
+  def encrypt(message, key, date) #add module method for key and date
+    encryption = Encrypt.new(message, key  , date)
     encryption.encrypt_message
   end
 
-  def decrypt(ciphertext, key, date)
+  def decrypt(ciphertext, key, date) 
     decryption = Decrypt.new(ciphertext,key, date)
     decryption.decrypt_message
   end
