@@ -8,7 +8,7 @@ describe Enigma do
 
   end
 
-  xit 'exists' do
+  it 'exists' do
     expect(@enigma).to be_a(Enigma)
   end
 
@@ -69,11 +69,11 @@ describe Enigma do
   end
 
   xit 'can crack an encryption using todays date' do
-    expected = {
-      decryption: "hello world end",
-      date:  #todays date in the format DDMMYY,
-      key: # key used for encryption
-    }
+    # expected = {
+    #   decryption: "hello world end",
+    #   date:  #todays date in the format DDMMYY,
+    #   #key: # key used for encryption
+    # }
     expect(enigma.crack("vjqtbeaweqihssi")).to eq(expected)
   end
 end
