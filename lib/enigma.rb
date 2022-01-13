@@ -1,19 +1,18 @@
 class Enigma
-
+# include module to build default keys and dates
   def initialize
-    
+    # @encryption = Encrypt.new
+    # @decryption = Decrypt.new
   end
 
   def encrypt(message, key, date)
-    # :encryption => the encrypted String
-    # :key => the key used for encryption as a String
-    # :date => the date used for encryption as a String in the form DDMMYY
+    encryption = Encrypt.new(message, key, date)
+    encryption.encrypt_message
   end
 
   def decrypt(ciphertext, key, date)
-    # :decryption => the decrypted String
-    # :key => the key used for decryption as a String
-    # :date => the date used for decryption as a String in the form DDMMYY
+    decryption = Decrypt.new(ciphertext,key, date)
+    decryption.decrypt_message
   end
 
 end
