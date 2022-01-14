@@ -32,4 +32,27 @@ describe Encrypt do
     expect(@encrypt.encryption).to eq(expected)
   end
 
+  xit 'can create keys' do
+    expect(a key).to be_a(Integer)
+    expect(a key.size).to eq(2)
+    expect(b key).to be_a(Integer)
+    expect(b key.size).to eq(2)
+    expect(c key).to be_a(Integer)
+    expect(c key.size).to eq(2)
+    expect(d key).to be_a(Integer)
+    expect(d key.size).to eq(2)
+  end
+
+  xit 'can create offsets' do
+    expect(a offset).to be_a(Integer)
+    expect(a offset.size).to eq(1)
+    expect(b offset).to be_a(Integer)
+    expect(b offset.size).to eq(1)
+    expect(c offset).to be_a(Integer)
+    expect(c offset.size).to eq(1)
+    expect(d offset).to be_a(Integer)
+    expect(d offset.size).to eq(1)
+
+  end
+
 end
