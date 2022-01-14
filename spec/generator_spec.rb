@@ -9,11 +9,11 @@ describe Generator do
   end
 
   xit 'can generate a random number' do
-    expect(@gen_key).to be_a(Integer)
+    expect(@enigma.gen_key).to be_a(Integer)
   end
 
   xit 'can generate todays date' do
-    expect(@gen_date).to be_a(Integer)
+    expect(@enigma.gen_date).to be_a(Integer)
   end
 
   xit 'can generate characters' do

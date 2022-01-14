@@ -1,5 +1,9 @@
+require './generator'
+
 class Decrypt
-#include module to create letters array
+  include Generator
+  
+  attr_reader :ciphertext, :key, :date, :decryption
   def initialize(ciphertext, key, date)
     @ciphertext = ciphertext
     @key = key

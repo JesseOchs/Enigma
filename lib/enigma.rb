@@ -1,16 +1,14 @@
-class Enigma
-# include module to build default keys and dates
-  def initialize
-    # @encryption = Encrypt.new
-    # @decryption = Decrypt.new
-  end
+require './generator'
 
-  def encrypt(message, key, date) #add module method for key and date
+class Enigma
+  include Generator
+
+  def encrypt(message, key = @gen_key, date = @gen_date)
     encryption = Encrypt.new(message, key  , date)
     encryption.encrypt_message
   end
 
-  def decrypt(ciphertext, key, date) 
+  def decrypt(ciphertext, key, date)
     decryption = Decrypt.new(ciphertext,key, date)
     decryption.decrypt_message
   end
