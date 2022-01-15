@@ -24,15 +24,10 @@ describe Encrypt do
 
   end
 
-  xit 'can create offsets' do
-    expect(a offset).to be_a(Integer)
-    expect(a offset.size).to eq(1)
-    expect(b offset).to be_a(Integer)
-    expect(b offset.size).to eq(1)
-    expect(c offset).to be_a(Integer)
-    expect(c offset.size).to eq(1)
-    expect(d offset).to be_a(Integer)
-    expect(d offset.size).to eq(1)
+  it 'can create offsets' do
+    expected = [48, 88, 8, 4]
+    expect(@enigma.make_offsets("150122")).to eq(expected)
+
 
   end
 
