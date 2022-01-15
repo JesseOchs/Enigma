@@ -13,9 +13,9 @@ describe Generator do
     expect(@enigma.gen_key.size).to eq(5)
   end
 
-  xit 'can generate todays date' do
-    expect(@enigma.gen_date).to be_a(Integer)
-    expect(@enigma.gen_date.size).to be_a(6)
+  it 'can generate todays date' do
+    expect(@enigma.gen_date).to be_a(String)
+    expect(@enigma.gen_date.size).to eq(6)
   end
 
 
