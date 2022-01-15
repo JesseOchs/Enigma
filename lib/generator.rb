@@ -6,7 +6,8 @@ module Generator
   end
 
   def gen_date
-
+    date = Time.now.strftime("%d%m%y")
+    return date.rjust(6, '0')
   end
 
   def gen_characters
