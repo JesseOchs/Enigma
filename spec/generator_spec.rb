@@ -8,8 +8,8 @@ describe Generator do
 
   end
 
-  xit 'can generate a random number' do
-    expect(@enigma.gen_key).to be_a(Integer)
+  it 'can generate a random number' do
+    expect(@enigma.gen_key).to be_a(String)
     expect(@enigma.gen_key.size).to eq(5)
   end
 
