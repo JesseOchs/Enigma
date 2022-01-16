@@ -2,18 +2,8 @@ require './spec_helper'
 
 describe Encrypt do
   before :each do
-    @encrypt_data = {
-                      decryption: "hello world",
-                      key: "02715",
-                      date: "040895"
-                    }
-    @decrypt_data = {
-                      encryption: "keder ohulw",
-                      key: "02715",
-                      date: "040895"
-                    }
-    @enigma = Enigma.new
 
+    @enigma = Enigma.new
 
   end
 
@@ -29,8 +19,7 @@ describe Encrypt do
   end
 
   it 'can make shifts from keys and date' do
-    expected = [60, 111, 42, 49]
-    require 'pry'; binding.pry
+    expected = [16, 31, 42, 49]
     expect(@enigma.make_shifts("12345", "150122")).to eq(expected)
   end
 end
