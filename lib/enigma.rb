@@ -11,7 +11,7 @@ class Enigma
   end
 
   def decrypt(ciphertext, key, date)
-    decryption = Decrypt.new(ciphertext,key, date)
+
     decryption.decrypt_message
   end
 

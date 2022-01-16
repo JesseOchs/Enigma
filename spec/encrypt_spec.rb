@@ -24,12 +24,13 @@ describe Encrypt do
   end
 
   it 'can create offsets' do
-    expected = [48, 88, 8, 4]
+    expected = [4, 8, 8, 4]
     expect(@enigma.make_offsets("150122")).to eq(expected)
   end
 
   it 'can make shifts from keys and date' do
-    expected = [60, 111, 42, 49] 
+    expected = [60, 111, 42, 49]
+    require 'pry'; binding.pry
     expect(@enigma.make_shifts("12345", "150122")).to eq(expected)
   end
 end
