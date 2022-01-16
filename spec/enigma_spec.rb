@@ -12,7 +12,7 @@ describe Enigma do
     expect(@enigma).to be_a(Enigma)
   end
 
-  xit 'can encrypt input with 3 arguments, string, key, date' do
+  it 'can encrypt input with 3 arguments, string, key, date' do
     expected = {
       encryption: "keder ohulw",
       key: "02715",
