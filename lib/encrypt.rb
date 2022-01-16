@@ -9,14 +9,14 @@ module Encrypt
   def encrypt_message(message, key, date)
     rotated_characters = shifted_characters(key, date)
     output = ""
-      message.each_char { |char|
-        if message.index(char) % 4 == 0
+      message.each_char.with_index { |char, index|
+        if index % 4 == 0
           output << rotated_characters[0][character_swap(char)]
-        elsif message.index(char) % 4 == 1
+        elsif index % 4 == 1
           output << rotated_characters[1][character_swap(char)]
-        elsif message.index(char) % 4 == 2
+        elsif index % 4 == 2
           output << rotated_characters[2][character_swap(char)]
-        elsif message.index(char) % 4 == 3
+        elsif index % 4 == 3
           output << rotated_characters[3][character_swap(char)]
         end
         }
