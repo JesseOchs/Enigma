@@ -1,18 +1,22 @@
 require './generator'
+require './shifts'
 
-class Encrypt
+module Encrypt
   include Generator
+  include Shifts
 
-  attr_reader :message, :key, :date, :encryption
-  def initialize(message, key, date)
-    @message = message
-    @key = key
-    @date = date
-    @encryption = {key: key, date: date}
-  end
-
-  def encrypt_message
-    @encryption
+  def encrypt_message(message, key, date)
+    rotated_characters = shifted_characters(key, date)
+    output = ""
+      message.each_char.with_index do |char, index|
+        case
+        when index % 4 == 0 then output << rotated_characters[0][gen_characters.index(char)]
+        when index % 4 == 1 then output << rotated_characters[1][gen_characters.index(char)]
+        when index % 4 == 2 then output << rotated_characters[2][gen_characters.index(char)]
+        when index % 4 == 3 then output << rotated_characters[3][gen_characters.index(char)]
+        end
+      end
+    return output
   end
 
 end
