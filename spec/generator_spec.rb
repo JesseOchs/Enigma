@@ -16,6 +16,7 @@ describe Generator do
   it 'can generate todays date' do
     expect(@enigma.gen_date).to be_a(String)
     expect(@enigma.gen_date.size).to eq(6)
+    expect(@enigma.gen_date).to eq(Time.now.strftime("%d%m%y"))
   end
 
 

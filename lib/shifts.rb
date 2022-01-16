@@ -16,14 +16,12 @@ module Shifts
       offsets << date[-3].to_i
       offsets << date[-2].to_i
       offsets << date[-1].to_i
-      return offsets
+    return offsets
   end
 
   def make_shifts(key, date)
     shifts = make_keys(key).zip(make_offsets(date))
-      shifts.map do |pair|
-        pair.sum
-      end
+    shifts.map { |pair| pair.sum }
   end
 
   def shifted_characters(key, date)
@@ -36,6 +34,5 @@ module Shifts
       characters_shifted << characters.rotate(shifts[3])
     return characters_shifted
   end
-
 
 end

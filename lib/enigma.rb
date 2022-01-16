@@ -9,7 +9,7 @@ class Enigma
   include Decrypt
   include Shifts
 
-  def encrypt(message, key = @gen_key, date = @gen_date)
+  def encrypt(message, key = gen_key, date = gen_date)
     return output = {
       encryption: encrypt_message(message, key, date),
       key: key,
