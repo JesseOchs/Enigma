@@ -6,6 +6,7 @@ require './shifts'
 class Enigma
   include Generator
   include Encrypt
+  include Decrypt
   include Shifts
 
   def encrypt(message, key = @gen_key, date = @gen_date)
