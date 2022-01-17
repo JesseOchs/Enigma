@@ -1,4 +1,4 @@
-require_relative './enigma'
+require './enigma'
 
 enigma= Enigma.new
 date = enigma.gen_date

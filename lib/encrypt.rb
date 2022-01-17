@@ -1,5 +1,5 @@
-require_relative './generator'
-require_relative './shifts'
+require './generator'
+require './shifts'
 
 module Encrypt
   include Generator

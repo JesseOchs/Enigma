@@ -1,7 +1,7 @@
-require_relative './generator'
-require_relative './encrypt'
-require_relative './decrypt'
-require_relative './shifts'
+require './generator'
+require './encrypt'
+require './decrypt'
+require './shifts'
 
 class Enigma
   include Generator
