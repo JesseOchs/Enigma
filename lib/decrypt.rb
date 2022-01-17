@@ -1,5 +1,5 @@
-require './generator'
-require './shifts'
+require_relative './generator'
+require_relative './shifts'
 
 module Decrypt
   include Generator

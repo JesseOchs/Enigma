@@ -1,7 +1,7 @@
-require './generator'
-require './encrypt'
-require './decrypt'
-require './shifts'
+require_relative './generator'
+require_relative './encrypt'
+require_relative './decrypt'
+require_relative './shifts'
 
 class Enigma
   include Generator
@@ -11,12 +11,12 @@ class Enigma
 
   def encrypt(message, key = gen_key, date = gen_date)
     return output = {
-      encryption: encrypt_message(message, key, date),
+      encryption: encrypt_message(message.downcase, key, date),
       key: key,
       date: date }
   end
 
-  def decrypt(ciphertext, key, date)
+  def decrypt(ciphertext, key, date = gen_date)
     return output = {
       decryption: decrypt_message(ciphertext, key, date),
       key: key,
