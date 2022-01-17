@@ -6,8 +6,8 @@ module Encrypt
   include Shifts
 
   def encrypt_message(message, key, date)
-    rotated_characters = shifted_characters(key, date)
-    output = ""
+      rotated_characters = shifted_characters(key, date)
+      output = ""
       message.each_char.with_index do |char, index|
         case
         when index % 4 == 0 then output << rotated_characters[0][gen_characters.index(char)]
