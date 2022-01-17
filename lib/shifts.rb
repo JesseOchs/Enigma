@@ -27,11 +27,10 @@ module Shifts
   def shifted_characters(key, date)
     characters_shifted = []
     shifts = make_shifts(key, date)
-    characters = gen_characters
-      characters_shifted << characters.rotate(shifts[0])
-      characters_shifted << characters.rotate(shifts[1])
-      characters_shifted << characters.rotate(shifts[2])
-      characters_shifted << characters.rotate(shifts[3])
+      characters_shifted << gen_characters.rotate(shifts[0])
+      characters_shifted << gen_characters.rotate(shifts[1])
+      characters_shifted << gen_characters.rotate(shifts[2])
+      characters_shifted << gen_characters.rotate(shifts[3])
     return characters_shifted
   end
 
