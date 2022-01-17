@@ -10,6 +10,7 @@ module Decrypt
       output = ""
       ciphertext.each_char.with_index do |char, index|
         case
+        when gen_characters.include?(char) == false then output << char
         when index % 4 == 0 then output << gen_characters[rotated_characters[0].index(char)]
         when index % 4 == 1 then output << gen_characters[rotated_characters[1].index(char)]
         when index % 4 == 2 then output << gen_characters[rotated_characters[2].index(char)]
