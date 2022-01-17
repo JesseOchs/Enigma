@@ -28,7 +28,7 @@ Following the project requirements all things were implemented correctly. I woul
 
 ## Object Oriented Programming
 
--[X] Project is broken into logical components - appropriately encapsulated.
+[X] Project is broken into logical components - appropriately encapsulated.
 
 [X] No classes are unreasonably small or large.
 
