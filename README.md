@@ -18,9 +18,9 @@ Welcome to my Enigma project. This project uses the Command Line Interface to En
 
 ## Functionality
 
-[X] Enigma Class with encrypt and decrypt methods successfully implemented.
+- [x] Enigma Class with encrypt and decrypt methods successfully implemented.
 
-[X] Encrypt and Decrypt CLI successfully implemented.
+- [x] Encrypt and Decrypt CLI successfully implemented.
 
 ### Thoughts
 
@@ -28,13 +28,13 @@ Following the project requirements all things were implemented correctly. I woul
 
 ## Object Oriented Programming
 
-[X] Project is broken into logical components - appropriately encapsulated.
+- [x] Project is broken into logical components - appropriately encapsulated.
 
-[X] No classes are unreasonably small or large.
+- [x] No classes are unreasonably small or large.
 
-[X] Classes do not contain knowledge/info/behavior that they shouldn't know about.
+- [x] Classes do not contain knowledge/info/behavior that they shouldn't know about.
 
-[X] Single responsibilities can be articulated.
+- [x] Single responsibilities can be articulated.
 
 ### Thoughts
 
@@ -42,13 +42,13 @@ I broke the project down into one class and four modules. Each module includes m
 
 ## Ruby Conventions and Mechanics
 
-[X] Code is properly indented, spaced, and concise.
+- [x] Code is properly indented, spaced, and concise.
 
-[X] All class, method, variable, and file names follow convention.
+- [x] All class, method, variable, and file names follow convention.
 
-[X] Most of the enumerables and data structures chosen are the most efficient.
+- [x] Most of the enumerables and data structures chosen are the most efficient.
 
-[X] Implemented multiple hashes in a logical manner.
+- [x] Implemented multiple hashes in a logical manner.
 
 ### Thoughts
 
@@ -56,24 +56,24 @@ In order to follow Turing's rules for keeping methods below 12 lines, I used cas
 
 ## Test Driven Development
 
-[X] Every class has a spec file and every method within a class is completely tested to verify the expected behavior.
+- [x] Every class has a spec file and every method within a class is completely tested to verify the expected behavior.
 
-[X] Module methods are tested within the Class spec file that they apply to.
+- [x] Module methods are tested within the Class spec file that they apply to.
 
-[X] Edge cases are addressed in testing.
+- [x] Edge cases are addressed in testing.
 
-[X] Tests were written first before implementation of code.
+- [x] Tests were written first before implementation of code.
 
-[X] Simplecov shows coverage over 99% coverage.
+- [x] Simplecov shows coverage over 99% coverage.
 
 ### Thoughts
 
 Testing for an expected output of a random number seems impossible at my skill level. Testing that it is an `Integer` and that it's size was as intended felt like a copout, but it worked to get the coverage. Some tests had to be changed along the way as the project was built out and some had to be added as new ideas emerged and were implemented.
 
 ## Version Control
-[X] Over 30 commits.
+- [x] Over 30 commits.
 
-[X] Uses logical pull request workflow.
+- [x] Uses logical pull request workflow.
 
 ### Thoughts
 
