@@ -25,12 +25,12 @@ module Shifts
   end
 
   def shifted_characters(key, date)
-    characters_shifted = []
-    shifts = make_shifts(key, date)
-      characters_shifted << gen_characters.rotate(shifts[0])
-      characters_shifted << gen_characters.rotate(shifts[1])
-      characters_shifted << gen_characters.rotate(shifts[2])
-      characters_shifted << gen_characters.rotate(shifts[3])
+    characters_shifted = {
+      :shift_1 => gen_characters.rotate(make_shifts(key, date)[0]),
+      :shift_2 => gen_characters.rotate(make_shifts(key, date)[1]),
+      :shift_3 => gen_characters.rotate(make_shifts(key, date)[2]),
+      :shift_4 => gen_characters.rotate(make_shifts(key, date)[3])
+    }
     return characters_shifted
   end
 
